@@ -12,7 +12,7 @@ app.disable('x-powered-by');
 app.use(express.urlencoded({ extended: false }));
 app.set('port', process.env.PORT || 2022);
 
-app.use(express.static(join(__dirname, '..', 'client', 'public')));
+app.use(express.static(join(__dirname, '..', 'client')));
 
 app.use(router);
 
