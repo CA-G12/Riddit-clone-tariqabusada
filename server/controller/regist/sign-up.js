@@ -11,7 +11,7 @@ const signUp = (req, res, next) => {
     const {
         full_name,
         email,
-        password
+        password,
     } = req.body;
 
     const { error, value } = signUpSchema.validate(req.body);
@@ -20,9 +20,9 @@ const signUp = (req, res, next) => {
         bcrypt.hash(password, 9)
             .then((hashed) => signUpQuery([full_name, email, hashed]))
             .then((result) => {
-                const { id, img_url, birth, job } = result.rows[0];
+                const { id, img_url, job } = result.rows[0];
 
-                jwt.sign({ id, full_name, email, img_url, birth, job }, SECRET, { expiresIn: '365d' }, (error, token) => {
+                jwt.sign({ id, full_name, email, img_url, job }, SECRET, { expiresIn: '365d' }, (error, token) => {
                     if (error) next(error);
                     res.cookie('token', token, { httpOnly: true })
                         .status(200)

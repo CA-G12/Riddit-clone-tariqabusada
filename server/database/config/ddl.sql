@@ -8,8 +8,7 @@ CREATE TABLE users (
     email VARCHAR(80) NOT NULL UNIQUE,
     password VARCHAR(80) NOT NULL,
     img_url VARCHAR(400) DEFAULT "https://i0.wp.com/researchictafrica.net/wp/wp-content/uploads/2016/10/default-profile-pic.jpg",
-    birth VARCHAR(80),
-    job VARCHAR(80)
+    job VARCHAR(80) default null
 );
 
 CREATE TABLE posts (
