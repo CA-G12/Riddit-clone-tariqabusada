@@ -26,33 +26,17 @@
 
 /*-----------------------------------------*/
 
-@media (max-width: 1200px) {
+@media (min-width: 600px) {
     .nav-bar {
-        height: 70px;
+        height: 80px;
     }
     .logo {
         width: auto;
     }
     .logo-img {
-        margin-top: 1.1rem;
+        margin-top: 0.7rem;
         width: 50px;
         height: 50px;
         padding: 0.6rem;
-    }
-}
- /*---------------------------------------*/
-
-@media (min-width: 1200px) {
-    .nav-bar {
-        height: 100px;
-    }
-    .logo {
-        width: auto;
-    }
-    .logo-img {
-        margin-top: 1.9rem;
-        width: 70px;
-        height: 70px;
-        padding: 1.2rem;
     }
 }
