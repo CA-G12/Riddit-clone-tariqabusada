@@ -1,0 +1,268 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gray: #e7e7e7;
+    --red: #da610b;
+    --green: #1c850b;
+    --light-green: #169a01;
+    --light-gray: #f6f7f8;
+    --dark-gray: #d5d9dc;
+    --darker-gray: #9b9b9b;
+}
+
+body {
+    background-color: var(--dark-gray);
+}
+.nav-bar {
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a:link {
+    text-decoration: none;
+  }
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search{
+    width: 40%;
+    position: relative;
+}
+
+.search input{
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    background-color: var(--gray);
+    border-radius: 20px;
+    outline: 0;
+    border: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 300px;
+}
+.main a {
+    margin: 0.3rem;
+}
+.signup-btn {
+    background-color: var(--green);
+    color: white;
+    width: 112px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+}
+.login-btn {
+    background-color: white;
+    color: var(--green);
+    width:112px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: var(--green);
+    align-self: center;
+    align-content: center;
+}
+
+.login-btn:hover {
+    cursor: pointer;
+    color: var(--light-green);
+    border-color: var(--light-green);
+
+}
+.signup-btn:hover {
+    cursor: pointer;
+    background-color: var(--light-green);
+}
+
+.regist-btns {
+    display: block;
+    margin-top: 0.8rem;
+    padding: 0.7rem;
+}
+.options a{
+    margin-right: 0.9rem;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--darker-gray);
+}
+.options a:hover {
+    color: black;
+}
+.logo-name {
+    color: #000;
+    font-family: cursive;
+    margin-top: 1px;
+    font-weight: bold;
+}
+.logo-name span {
+    color: var(--red);
+}
+.user {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem;
+ }
+
+.user img {
+    margin-right: 0.4rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/*--------------- mobile screen ----------------------*/
+
+@media (max-width: 600px) {
+    .nav-bar {
+        height: 50px;
+    }
+    .logo-img {
+        width: 30px;
+        height: 30px;
+        margin: 0.4rem;
+    }
+    .options {
+        display: none;
+    }
+    .search {
+        display: none;
+    }
+
+    .signup-btn {
+        width: 80px;
+        height: 30px;
+        font-size: 14px;
+        border: none;
+        border-radius: 20px;
+    }
+    .login-btn {
+        width:80px;
+        height: 30px;
+        font-size: 14px;
+        border-radius: 20px;
+        border-width: 0.7px;
+    }
+
+    .user img {
+        width: 30px;
+        height: 30px;
+    }
+    .user {
+        margin-right: 1rem;
+    }
+}
+
+/*-----------------------------------------*/
+
+@media (min-width: 600px) {
+    .nav-bar {
+        height: 80px;
+    }
+    .logo-img {
+        width: 50px;
+        height: 50px;
+        margin: 0.6rem;
+    }
+}
+ /*-----------------------------------------*/
+
+ .forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.forms .form{
+    display: flex;
+    height: 600px;
+    width: 50%;
+    background-color: #fff;
+    align-items: center;
+    position: relative;
+}
+
+.forms .form .fa-xmark{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #737778;
+    z-index: 5000;
+}
+
+.forms .form img{
+    height: 100%;
+    width: 20%;
+}
+
+.forms .form div{
+    margin-left: 2rem;
+    width: 90%;
+}
+
+.forms .form div h2{
+    margin-bottom: 2rem;
+}
+
+.forms .form div input, button, .message{
+    width: 50%;
+    margin-bottom: 0.7rem;
+    padding: 0.5rem 1rem;
+}
+
+.forms .form .message {
+    color: red;
+    display: none;
+}
+
+.forms .form button {
+    background-color: #0079d3;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 0;
+    font-size: 1.2rem;
+}
+
+.forms .form a {
+    color: var(--deep-blue);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.forms .sign-in{
+    display: block;
+}
+
+.forms .sign-up{
+    display: none;
+}
