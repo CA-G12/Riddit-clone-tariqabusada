@@ -1,14 +1,11 @@
 const { Router } = require('express');
 
-const { signUp, login } = require('../controller/regist/');
+const { signUp, login, logOut } = require('../controller/regist/');
 
 const router = Router();
 
-router.post('/sign-up', signUp)
-router.post('user/log-in', login)
-
-router.get('/regist', (req, res) => {
-    res.send({ message: 'regist route' });
-});
+router.post('/sign-up', signUp);
+router.post('/user/log-in', login);
+router.get('/user/log-out', logOut);
 
 module.exports = router;
