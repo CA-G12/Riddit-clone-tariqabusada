@@ -17,11 +17,11 @@ app.use(express.static(join(__dirname, '..', 'client')));
 app.use(router);
 
 app.use((req, res) => {
-    res.sendFile(join(__dirname, '..', 'client', 'public', 'html', 'not-found.html'));
+    res.status(404).sendFile(join(__dirname, '..', 'client', 'Errors', '404.html'));
 });
 
 app.use((err, req, res, next) => {
-    res.sendFile(join(__dirname, '..', 'client', 'public', 'html', 'server-error.html'));
+    res.status(500).sendFile(join(__dirname, '..', 'client', 'Errors', '500.html'));
 });
 
 module.exports = app;
