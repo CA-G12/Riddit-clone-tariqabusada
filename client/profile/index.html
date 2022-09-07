@@ -6,55 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://www.redditinc.com/assets/images/site/reddit-logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>HOME</title>
+    <title>Profile</title>
 </head>
 
 <body>
     <div class="nav-bar">
         <div class="logo">
-            <a href="#"><img src="./images/logo.png" alt="logo" class="logo-img"></a>
+            <a href="#"><img src="../images/logo.png" alt="logo" class="logo-img"></a>
             <a href="#"><text class="logo-name">Red<span>d</span>it</text></a>
         </div>
         <div class="search">
             <input type="text" placeholder="search in reddit">
         </div>
-        <div class="options">
-            <a href="/client/">About</a>
-            <a href="/client/">Help</a>
-            <a href="/client/">Contact</a>
-        </div>
-        <div class="regist-btns">
-            <a href="./log-in/index.html"><button class="login-btn">Login</button></a>
-            <a href="./sign-up/index.html"><button class="signup-btn">Sign up</button></a>
+        <div class="user">
+            <img class="user-img"
+                src="https://i0.wp.com/researchictafrica.net/wp/wp-content/uploads/2016/10/default-profile-pic.jpg"
+                alt="profile">
+            <h3 class="username">tariq abu sada</h3>
+            <a href="../index.html"><img class="logout-img" src="../images/logout.jpg" alt=""></a>
         </div>
     </div>
     <div class="main">
-        <div class="sec1">
-            <h5>Trending today</h5>
-            <section class="trending">
-                <div class="trend t1">
-                    <h4>Netflex</h4>
-                    <p>gafvdj hgad jhgdvh sdc sdvoka wegerg er...</p>
-                </div>
-                <div class="trend t2">
-                    <h4>Ted Cruz</h4>
-                    <p>gafvdj hgad jhgdvh sdc sdvoka wegerg er...</p>
-                </div>
-                <div class="trend t3">
-                    <h4>Amazon</h4>
-                    <p>gafvdj hgad jhgdvh sdc sdvoka wegerg er...</p>
-                </div>
-                <div class="trend t4">
-                    <h4>will Smith</h4>
-                    <p>gafvdj hgad jhgdvh sdc sdvoka wegerg er...</p>
-                </div>
-            </section>
-        </div>
         <div class="sec2">
+            <section class="new-post">
+                <img src="https://i0.wp.com/researchictafrica.net/wp/wp-content/uploads/2016/10/default-profile-pic.jpg"
+                    alt="">
+                <input type="text" placeholder="Create post">
+                <img class="btn" src="../images/post.jpg" alt="">
+            </section>
             <h5>Popular Posts</h5>
             <div class="posts-people">
                 <section class="posts"></section>
