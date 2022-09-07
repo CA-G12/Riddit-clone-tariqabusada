@@ -1,0 +1,77 @@
+
+:root {
+    --gray: #e7e7e7;
+    --red: #da610b;
+    --green: #1c850b;
+    --light-green: #169a01;
+    --wight-green: #edfdeb;
+    --light-gray: #f6f7f8;
+    --dark-gray: #d5d9dc;
+    --darker-gray: #9b9b9b;
+}
+body {
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+ /*----------------- form ------------------------*/
+
+.form{
+    position: relative;
+    display: flex;
+    height: 500px;
+    width: 40%;
+    background-color: #fff;
+    align-items: center;
+    box-shadow: #9b9b9b 6px 0px 14px 1px;
+}
+
+.form .fa-house{
+    position: absolute;
+    right: 1.6rem;
+    top: 1.6rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #6e6e6e;
+}
+.form img{
+    height: 100%;
+    width: 20%;
+}
+
+.form div{
+    margin-left: 2rem;
+    width: 90%;
+}
+
+.form div h2{
+    margin-bottom: 2rem;
+}
+
+.form div input, button, .message{
+    width: 50%;
+    margin-bottom: 0.7rem;
+    padding: 0.5rem 1rem;
+}
+
+.form .message {
+    color: red;
+    display: none;
+}
+
+.form button {
+    background-color: var(--green);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 0;
+    font-size: 1.1rem;
+}
+
+.form a {
+    color: var(--green);
+    text-transform: uppercase;
+    cursor: pointer;
+}
