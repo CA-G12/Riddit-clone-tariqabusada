@@ -9,7 +9,7 @@ const signUpSchema = require('../../validation/sign-up');
 
 const signUp = (req, res, next) => {
     const {
-        full_name,
+        fullname,
         email,
         password,
     } = req.body;
@@ -17,16 +17,18 @@ const signUp = (req, res, next) => {
     const { error, value } = signUpSchema.validate(req.body);
 
     if (!error) {
-        bcrypt.hash(password, 9)
-            .then((hashed) => signUpQuery([full_name, email, hashed]))
-            .then((result) => {
-                const { id, img_url, job } = result.rows[0];
-
-                jwt.sign({ id, full_name, email, img_url, job }, SECRET, { expiresIn: '365d' }, (error, token) => {
+        bcrypt.hash(password, 10)
+            .then((hashed) =>
+                signUpQuery([fullname, email, hashed])
+            )
+            .then((data) => {
+                const { id, img_url, job } = data.rows[0];
+                console.log(id, img_url, job);
+                jwt.sign({ id, fullname, email, img_url, job }, SECRET, { expiresIn: '365d' }, (error, token) => {
                     if (error) next(error);
                     res.cookie('token', token, { httpOnly: true })
                         .status(200)
-                        .send({ message: 'welcome', data: result.rows[0], state: 'sucess' });
+                        .send({ message: 'welcome', data: data.rows[0], state: 'success' });
                 });
             })
             .catch((error) => res.json({ message: 'email was used by another person', state: 'fail' }));

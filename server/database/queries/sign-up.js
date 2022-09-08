@@ -1,11 +1,6 @@
 const connection = require('../config/connection');
 
-const signUpQuery = ( userInfo ) => {   // [userInfo] must be an array
-    const sql = {
-        text: 'INSERT INTO users(full_name, email, password, img_url, job) VALUES ($1,$2,$3,$4,$5)',
-        values: userInfo
-    }
-    return connection.query(sql);
-};
+const signUpQuery = (values) => connection
+    .query('INSERT INTO users(full_name, email, password) VALUES ($1,$2,$3) RETURNING *', values);
 
-module.exports = {signUpQuery};
+module.exports = { signUpQuery };
