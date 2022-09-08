@@ -25,7 +25,7 @@ const signUp = (name, email, pass, rePass, data) => {
         wrongMessage('you should fill in all fields');
         return;
     }
-    if (name.length < 6) {
+    if (name.length < 3) {
         wrongMessage('invalid name');
         return;
     }
@@ -33,7 +33,7 @@ const signUp = (name, email, pass, rePass, data) => {
         wrongMessage('email dose not accepted');
         return;
     }
-    if (!passwordPatt.test(pass) || pass.length < 3) {
+    if (!passwordPatt.test(pass) || pass.length < 8) {
         wrongMessage('password must be at least 8 characters');
         return;
     }
