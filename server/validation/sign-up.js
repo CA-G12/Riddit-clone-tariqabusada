@@ -1,7 +1,7 @@
 const joi = require('joi');
 
 const signUpSchema = joi.object({
-    full_name: joi
+    fullname: joi
         .string()
         .alphanum()
         .min(6)
@@ -17,7 +17,7 @@ const signUpSchema = joi.object({
         .string()
         .alphanum()
         .required(),
-    repeat_password: joi
+    rePassword: joi
         .ref('password'),
 });
 

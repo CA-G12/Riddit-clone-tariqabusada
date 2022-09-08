@@ -75,10 +75,13 @@ a:link {
     border-radius: 50%;
 }
 .user .logout-img {
-    margin: 0.3rem;
+    margin: 0.4rem;
     width: 30px;
     height: 35px;
     border-radius: 20px;
+}
+.user .logout-img:hover {
+    cursor: pointer;
 }
 
 /*--------------- mobile screen ----------------------*/
