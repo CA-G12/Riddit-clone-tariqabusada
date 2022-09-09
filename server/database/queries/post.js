@@ -1,7 +1,9 @@
 const connection = require('../config/connection');
 
-const addPost = () => {};
+const addPostQuery = (data) => connection
+        .query = ('Insert into posts(content, date, img, user_id) VALUES ($1,$2,$3,$4) RETURNING *', data );
 
-const deletePost = () => {};
+const deletePostQuery = ( postId ) => connection
+        .query = ('DELETE FROM posts WHERE id = ($1) RETURNING *', postId);
 
-module.exports = { addPost, deletePost };
+module.exports = { addPostQuery, deletePostQuery };

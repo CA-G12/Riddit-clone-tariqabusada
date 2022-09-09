@@ -13,8 +13,9 @@ CREATE TABLE users (
 
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
-    post TEXT NOT NULL,
+    content TEXT NOT NULL,
     date DATE NOT NULL,
+    img VARCHAR(400),
     user_id INT,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );

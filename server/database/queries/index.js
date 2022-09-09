@@ -1,5 +1,5 @@
 const { addLike } = require('./add-like');
-const { addPost, deletePost} = require('./post');
+const { addPostQuery, deletePostQuery} = require('./post');
 const { signUpQuery } = require('./sign-up');
 const { loginQuery } = require('./log-in');
 const { addComment, getComments} = require('./comments');
@@ -9,11 +9,11 @@ const { getUserPosts } = require('./profile');
 module.exports = { 
     signUpQuery,
     loginQuery,
-    addPost,
+    addPostQuery,
     addComment,
     addLike,
     getAllPosts,
     getComments,
     getUserPosts,
-    deletePost,
+    deletePostQuery,
 };

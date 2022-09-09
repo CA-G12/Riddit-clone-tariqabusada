@@ -133,21 +133,26 @@ a:link {
     padding-left: 1.3rem;
     padding-right: 1.3rem;
     background-color: var(--light-gray);
-    height: 60px;
-    width: 60%;
+    height: 150px;
+    width: 100%;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: space-between;
     border-radius: 4px;
 }
-.new-post input {
-    width:80%;
-    height: 40px;
+.new-post textarea {
+    border-radius: 10px;
+    margin-right: 3px;
+    padding: 4px;
 }
 .new-post .btn {
-    width: 20px;
-    height: 20px;
+    width: 60px;
+    height: 30px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 10px;
 }
 .new-post img{
     width:40px;
