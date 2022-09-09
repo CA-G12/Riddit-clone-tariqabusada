@@ -4,8 +4,8 @@ const {} = require('../controller/user');
 
 const router = Router();
 
-router.get('/user', (req, res) => {
-    res.send('user route');
-});
+router.get('/user/homepage');
+
+router.get('/user/profile');
 
 module.exports = router;
