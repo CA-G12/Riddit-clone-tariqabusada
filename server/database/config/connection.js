@@ -17,7 +17,9 @@ else throw Error('There is no database url !!');
 
 const connection = new Pool({
     connectionString: URL,
-    ssl: false,
+    ssl: {
+        rejectUnauthorized: false
+      },
 });
 
 module.exports = connection;

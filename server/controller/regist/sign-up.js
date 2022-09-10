@@ -26,7 +26,7 @@ const signUp = (req, res, next) => {
                 console.log(id, img_url, job);
                 jwt.sign({ id, fullname, email, img_url, job }, SECRET, { expiresIn: '365d' }, (error, token) => {
                     if (error) next(error);
-                    res.cookie('token', "tokenf", { httpOnly: true })
+                    res.cookie('token', token, { httpOnly: true })
                         .status(200)
                         .send({ message: 'welcome', data: data.rows[0], state: 'success' });
                 });
