@@ -24,5 +24,5 @@ logInBtn.addEventListener('click', (e) => {
         if (data.message === 'successful') window.location.href = '/feed';
         wrongMessage(data.message);
     })
-    .catch(console.error);
+    .catch((error) => console.log(error));
 });
