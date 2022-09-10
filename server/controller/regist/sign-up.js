@@ -26,12 +26,12 @@ const signUp = (req, res, next) => {
                 console.log(id, img_url, job);
                 jwt.sign({ id, fullname, email, img_url, job }, SECRET, { expiresIn: '365d' }, (error, token) => {
                     if (error) next(error);
-                    res.cookie('token', token, { httpOnly: true })
+                    res.cookie('token', "tokenf", { httpOnly: true })
                         .status(200)
                         .send({ message: 'welcome', data: data.rows[0], state: 'success' });
                 });
             })
-            .catch((error) => console.log(error));/* res.json({ message: 'email was used by another person', state: 'fail' })) */
+            .catch((error) => res.json({ message: error.message, state: 'fail' }));
     }
     else {
         res.send({ message: error.details[0].message, state: 'fail' });
