@@ -31,7 +31,7 @@ const signUp = (req, res, next) => {
                         .send({ message: 'welcome', data: data.rows[0], state: 'success' });
                 });
             })
-            .catch((error) => res.json({ message: 'email was used by another person', state: 'fail' }));
+            .catch((error) => res.json({ message: error.message, state: 'fail' }));
     }
     else {
         res.send({ message: error.details[0].message, state: 'fail' });
